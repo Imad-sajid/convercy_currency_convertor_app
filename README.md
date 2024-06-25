@@ -4,7 +4,7 @@
 
 ## Overview
 
-Convertify is a robust and easy-to-use currency converter app designed to provide real-time currency conversion for users across the globe. This application supports multiple currencies and delivers up-to-date exchange rates with a user-friendly interface.
+Convercy is a robust and easy-to-use currency converter app designed to provide real-time currency conversion for users across the globe. This application supports multiple currencies and delivers up-to-date exchange rates with a user-friendly interface.
 
 ## Features
 
