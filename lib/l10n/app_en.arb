@@ -1,0 +1,86 @@
+{
+  "@@locale": "en",
+  "app_title": "Currency Converter",
+  "@app_title": {
+    "description": "Title for the application"
+  },
+  "amount_placeholder": "Enter amount",
+  "@amount_placeholder": {
+    "description": "Placeholder text for the amount input field"
+  },
+  "from_currency": "From",
+  "@from_currency": {
+    "description": "Label for the currency to convert from"
+  },
+  "to_currency": "To",
+  "@to_currency": {
+    "description": "Label for the currency to convert to"
+  },
+  "converted_amount": "Converted Amount",
+  "@converted_amount": {
+    "description": "Label for the converted amount"
+  },
+  "search_history": "Search History",
+  "@search_history": {
+    "description": "Label for the search history section"
+  },
+  "no_history": "No history available",
+  "@no_history": {
+    "description": "Message displayed when there is no search history"
+  },
+  "clear_history": "Clear History",
+  "@clear_history": {
+    "description": "Button text for clearing the search history"
+  },
+  "checkRates": "Easily check exchange rates between various currencies",
+  "@checkRates": {
+    "description": "Button text for checking exchange rates"
+  },
+  "amountLabel": "Amount",
+  "@amountLabel": {
+    "description": "Label for the amount input field"
+  },
+  "enterValidAmount": "Please enter a valid amount",
+  "@enterValidAmount": {
+    "description": "Message displayed when the entered amount is not valid"
+  },
+  "fromCurrencyLabel": "From",
+  "@fromCurrencyLabel": {
+    "description": "Label for the from currency dropdown"
+  },
+  "toCurrencyLabel": "To",
+  "@toCurrencyLabel": {
+    "description": "Label for the to currency dropdown"
+  },
+  "invalidInputOrRateZero": "Invalid input or rate is zero",
+  "@invalidInputOrRateZero": {
+    "description": "Message displayed when the input is invalid or the conversion rate is zero"
+  },
+  "noConnectivity": "No Connectivity",
+  "@noConnectivity": {
+    "description": "Title for no connectivity alert"
+  },
+  "noConnectivityMessage": "You are not connected to the internet. Please check your connection and try again.",
+  "@noConnectivityMessage": {
+    "description": "Message for no connectivity alert"
+  },
+  "internetConnectionLost": "Internet connection lost",
+  "@internetConnectionLost": {
+    "description": "Message displayed when the internet connection is lost"
+  },
+  "internetConnectionRestored": "Internet connection restored",
+  "@internetConnectionRestored": {
+    "description": "Message displayed when the internet connection is restored"
+  }
+  ,
+    "convert": "Convert",
+    "@convert": {
+      "description": "Button text for converting currency"
+    },
+    "noHistoryAvailable": "No History available.",
+    "@noHistoryAvailable": {
+      "description": "Message displayed when there is no conversion history available"
+    }
+  }
+  
+

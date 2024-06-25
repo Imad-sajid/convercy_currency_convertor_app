@@ -1,0 +1,82 @@
+{ 
+  "app_title": "Convertidor de Moneda",
+  "@app_title": {
+    "description": "Título de la aplicación"
+  },
+  "amount_placeholder": "Ingrese el monto",
+  "@amount_placeholder": {
+    "description": "Texto de marcador de posición para el campo de entrada de monto"
+  },
+  "from_currency": "De",
+  "@from_currency": {
+    "description": "Etiqueta para la moneda a convertir desde"
+  },
+  "to_currency": "A",
+  "@to_currency": {
+    "description": "Etiqueta para la moneda a convertir hacia"
+  },
+  "converted_amount": "Monto Convertido",
+  "@converted_amount": {
+    "description": "Etiqueta para el monto convertido"
+  },
+  "search_history": "Historial de Búsqueda",
+  "@search_history": {
+    "description": "Etiqueta para la sección de historial de búsqueda"
+  },
+  "no_history": "No hay historial disponible",
+  "@no_history": {
+    "description": "Mensaje mostrado cuando no hay historial de búsqueda"
+  },
+  "clear_history": "Borrar Historial",
+  "@clear_history": {
+    "description": "Texto del botón para borrar el historial de búsqueda"
+  },
+  "checkRates": "Compruebe fácilmente las tasas de cambio entre varias monedas",
+  "@checkRates": {
+    "description": "Texto del botón para verificar tasas de cambio"
+  },
+  "amountLabel": "Monto",
+  "@amountLabel": {
+    "description": "Etiqueta para el campo de entrada de monto"
+  },
+  "enterValidAmount": "Por favor ingrese un monto válido",
+  "@enterValidAmount": {
+    "description": "Mensaje mostrado cuando el monto ingresado no es válido"
+  },
+  "fromCurrencyLabel": "De",
+  "@fromCurrencyLabel": {
+    "description": "Etiqueta para el menú desplegable de moneda desde"
+  },
+  "toCurrencyLabel": "A",
+  "@toCurrencyLabel": {
+    "description": "Etiqueta para el menú desplegable de moneda hacia"
+  },
+  "invalidInputOrRateZero": "Entrada inválida o tasa es cero",
+  "@invalidInputOrRateZero": {
+    "description": "Mensaje mostrado cuando la entrada es inválida o la tasa de conversión es cero"
+  },
+  "noConnectivity": "Sin Conectividad",
+  "@noConnectivity": {
+    "description": "Título para la alerta de falta de conectividad"
+  },
+  "noConnectivityMessage": "No estás conectado a internet. Por favor, revisa tu conexión e intenta de nuevo.",
+  "@noConnectivityMessage": {
+    "description": "Mensaje para la alerta de falta de conectividad"
+  },
+  "internetConnectionLost": "Conexión a Internet perdida",
+  "@internetConnectionLost": {
+    "description": "Mensaje mostrado cuando se pierde la conexión a Internet"
+  },
+  "internetConnectionRestored": "Conexión a Internet restablecida",
+  "@internetConnectionRestored": {
+    "description": "Mensaje mostrado cuando se restablece la conexión a Internet"
+  },
+  "convert": "Convertir",
+  "@convert": {
+    "description": "Texto del botón para convertir moneda"
+  },
+  "noHistoryAvailable": "No hay historial disponible.",
+  "@noHistoryAvailable": {
+    "description": "Mensaje mostrado cuando no hay historial de conversiones disponible"
+  }
+}

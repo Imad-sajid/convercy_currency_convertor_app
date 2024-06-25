@@ -1,0 +1,84 @@
+{
+    "@@locale": "de",
+    "app_title": "Währungsumrechner",
+    "@app_title": {
+      "description": "Titel für die Anwendung"
+    },
+    "amount_placeholder": "Betrag eingeben",
+    "@amount_placeholder": {
+      "description": "Platzhaltertext für das Eingabefeld Betrag"
+    },
+    "from_currency": "Von",
+    "@from_currency": {
+      "description": "Label für die Währung, von der umgerechnet wird"
+    },
+    "to_currency": "Zu",
+    "@to_currency": {
+      "description": "Label für die Währung, in die umgerechnet wird"
+    },
+    "converted_amount": "Umgerechneter Betrag",
+    "@converted_amount": {
+      "description": "Label für den umgerechneten Betrag"
+    },
+    "search_history": "Suchverlauf",
+    "@search_history": {
+      "description": "Label für die Sektion Suchverlauf"
+    },
+    "no_history": "Kein Verlauf verfügbar",
+    "@no_history": {
+      "description": "Nachricht, die angezeigt wird, wenn kein Suchverlauf vorhanden ist"
+    },
+    "clear_history": "Verlauf löschen",
+    "@clear_history": {
+      "description": "Text für die Schaltfläche zum Löschen des Suchverlaufs"
+    },
+    "checkRates": "Kurse prüfen",
+    "@checkRates": {
+      "description": "Text für die Schaltfläche zum Überprüfen der Wechselkurse"
+    },
+    "amountLabel": "Betrag",
+    "@amountLabel": {
+      "description": "Label für das Eingabefeld Betrag"
+    },
+    "enterValidAmount": "Bitte geben Sie einen gültigen Betrag ein",
+    "@enterValidAmount": {
+      "description": "Nachricht, die angezeigt wird, wenn der eingegebene Betrag ungültig ist"
+    },
+    "fromCurrencyLabel": "Von",
+    "@fromCurrencyLabel": {
+      "description": "Label für das Dropdown-Menü Währung von"
+    },
+    "toCurrencyLabel": "Zu",
+    "@toCurrencyLabel": {
+      "description": "Label für das Dropdown-Menü Währung zu"
+    },
+    "invalidInputOrRateZero": "Ungültige Eingabe oder Rate ist null",
+    "@invalidInputOrRateZero": {
+      "description": "Nachricht, die angezeigt wird, wenn die Eingabe ungültig ist oder die Konversionsrate null ist"
+    },
+    "noConnectivity": "Keine Verbindung",
+    "@noConnectivity": {
+      "description": "Titel für die Warnung bei fehlender Verbindung"
+    },
+    "noConnectivityMessage": "Sie sind nicht mit dem Internet verbunden. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "@noConnectivityMessage": {
+      "description": "Nachricht für die Warnung bei fehlender Verbindung"
+    },
+    "internetConnectionLost": "Internetverbindung verloren",
+    "@internetConnectionLost": {
+      "description": "Nachricht, die angezeigt wird, wenn die Internetverbindung verloren geht"
+    },
+    "internetConnectionRestored": "Internetverbindung wiederhergestellt",
+    "@internetConnectionRestored": {
+      "description": "Nachricht, die angezeigt wird, wenn die Internetverbindung wiederhergestellt wird"
+    },
+    "convert": "Konvertieren",
+  "@convert": {
+    "description": "Schaltflächentext zum Konvertieren von Währungen"
+  },
+  "noHistoryAvailable": "Kein Verlauf verfügbar.",
+  "@noHistoryAvailable": {
+    "description": "Nachricht, die angezeigt wird, wenn kein Konvertierungsverlauf verfügbar ist"
+  }
+  }
+  

@@ -1,0 +1,82 @@
+{
+  "app_title": "محول العملات",
+  "@app_title": {
+    "description": "عنوان التطبيق"
+  },
+  "amount_placeholder": "أدخل المبلغ",
+  "@amount_placeholder": {
+    "description": "نص العنصر النائب لحقل إدخال المبلغ"
+  },
+  "from_currency": "من",
+  "@from_currency": {
+    "description": "التسمية الخاصة بالعملة التي سيتم التحويل منها"
+  },
+  "to_currency": "إلى",
+  "@to_currency": {
+    "description": "التسمية الخاصة بالعملة التي سيتم التحويل إليها"
+  },
+  "converted_amount": "المبلغ المحول",
+  "@converted_amount": {
+    "description": "التسمية الخاصة بالمبلغ المحول"
+  },
+  "search_history": "سجل البحث",
+  "@search_history": {
+    "description": "التسمية الخاصة بقسم سجل البحث"
+  },
+  "no_history": "لا يوجد سجل متاح",
+  "@no_history": {
+    "description": "الرسالة التي تُعرض عندما لا يكون هناك سجل بحث"
+  },
+  "clear_history": "مسح السجل",
+  "@clear_history": {
+    "description": "نص الزر لمسح سجل البحث"
+  },
+  "checkRates": "تحقق من الأسعار",
+  "@checkRates": {
+    "description": "نص الزر للتحقق من أسعار الصرف"
+  },
+  "amountLabel": "المبلغ",
+  "@amountLabel": {
+    "description": "التسمية الخاصة بحقل إدخال المبلغ"
+  },
+  "enterValidAmount": "يرجى إدخال مبلغ صالح",
+  "@enterValidAmount": {
+    "description": "الرسالة التي تُعرض عندما يكون المبلغ المُدخل غير صالح"
+  },
+  "fromCurrencyLabel": "العملة المحولة منها",
+  "@fromCurrencyLabel": {
+    "description": "التسمية الخاصة بالقائمة المنسدلة للعملة المحولة منها"
+  },
+  "toCurrencyLabel": "العملة المحولة إليها",
+  "@toCurrencyLabel": {
+    "description": "التسمية الخاصة بالقائمة المنسدلة للعملة المحولة إليها"
+  },
+  "invalidInputOrRateZero": "إدخال غير صالح أو المعدل صفر",
+  "@invalidInputOrRateZero": {
+    "description": "الرسالة التي تُعرض عندما يكون الإدخال غير صالح أو معدل التحويل صفر"
+  },
+  "noConnectivity": "لا يوجد اتصال",
+  "@noConnectivity": {
+    "description": "عنوان تنبيه عدم الاتصال"
+  },
+  "noConnectivityMessage": "أنت غير متصل بالإنترنت. يرجى التحقق من الاتصال والمحاولة مرة أخرى.",
+  "@noConnectivityMessage": {
+    "description": "رسالة لتنبيه عدم الاتصال"
+  },
+  "internetConnectionLost": "فقد الاتصال بالإنترنت",
+  "@internetConnectionLost": {
+    "description": "الرسالة التي تظهر عند فقدان الاتصال بالإنترنت"
+  },
+  "internetConnectionRestored": "تمت استعادة الاتصال بالإنترنت",
+  "@internetConnectionRestored": {
+    "description": "الرسالة التي تظهر عند استعادة الاتصال بالإنترنت"
+  },
+  "convert": "تحويل",
+  "@convert": {
+    "description": "نص الزر لتحويل العملة"
+  },
+  "noHistoryAvailable": "لا يوجد سجل متاح.",
+  "@noHistoryAvailable": {
+    "description": "الرسالة المعروضة عند عدم توفر سجل التحويلات"
+  }
+}
