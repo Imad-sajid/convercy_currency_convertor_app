@@ -81,7 +81,7 @@ class ConvertedAmount extends StatelessWidget {
         children: [
           Text(
             AppLocalizations.of(context).translate('converted_amount'),
-            style: const TextStyle(fontSize: 16, color: Colors.grey),
+            style: const TextStyle(fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
           Row(

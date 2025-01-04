@@ -1,5 +1,3 @@
-
-
 import 'package:Convertify/core/connectivity_provider.dart';
 import 'package:Convertify/core/country_code_provider.dart';
 import 'package:Convertify/core/crypto_provider.dart';
@@ -18,18 +16,22 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences prefs = await SharedPreferences.getInstance();
   bool isDarkMode = prefs.getBool('isDarkMode') ?? false;
+  bool firstTimeOnboarding = prefs.getBool('firstTimeOnboarding') ??
+      true; // Default to true for the first launch
   LocaleProvider localeProvider = LocaleProvider();
   await localeProvider.loadLocale();
 
   // runApp(MyApp(isDarkMode: isDarkMode));
-  runApp(MyApp(isDarkMode: isDarkMode));
-
+  runApp(
+      MyApp(isDarkMode: isDarkMode, firstTimeOnboarding: firstTimeOnboarding));
 }
 
 class MyApp extends StatelessWidget {
   final bool isDarkMode;
+  final bool firstTimeOnboarding;
 
-  const MyApp({super.key, required this.isDarkMode});
+  const MyApp(
+      {super.key, required this.isDarkMode, required this.firstTimeOnboarding});
 
   @override
   Widget build(BuildContext context) {
@@ -45,17 +47,20 @@ class MyApp extends StatelessWidget {
       ],
       child: Consumer<ThemeProvider>(builder: (context, themeProvider, _) {
         final localeProvider = Provider.of<LocaleProvider>(context);
+
         return MaterialApp(
           debugShowCheckedModeBanner: false,
 
-
           //initial ROUTE
-          initialRoute: AppRoutes.home,
+          initialRoute: firstTimeOnboarding
+              ? AppRoutes.onboarding
+              : AppRoutes.standardCurrency,
           routes: AppRoutes.getRoutes(),
           theme: ThemeData(
             primarySwatch: Colors.blue,
             shadowColor: Colors.white,
-            brightness: themeProvider.isDarkMode ? Brightness.dark : Brightness.light,
+            brightness:
+                themeProvider.isDarkMode ? Brightness.dark : Brightness.light,
             textTheme: TextTheme(
               bodyLarge: TextStyle(
                 fontFamily: 'Montserrat',
@@ -105,7 +110,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-

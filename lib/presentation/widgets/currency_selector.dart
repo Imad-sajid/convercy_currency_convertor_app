@@ -64,7 +64,6 @@ class FiatCurrencySelector extends StatelessWidget {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     final countryCodeProvider = Provider.of<CountryCodeProvider>(context);
@@ -102,13 +101,13 @@ class FiatCurrencySelector extends StatelessWidget {
 
             items: currencies.map((currency) {
               String countryCode = countryCodeProvider.getCountryCode(currency);
+              final themeProvider = Provider.of<ThemeProvider>(context);
               return DropdownMenuItem<String>(
                 value: currency,
                 child: Row(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.only(left:8.0),
-
+                      padding: const EdgeInsets.only(left: 8.0),
                       child: getCurrencyImage(currency, countryCode),
                     ),
                     // Padding(
@@ -121,7 +120,13 @@ class FiatCurrencySelector extends StatelessWidget {
                     //   ),
                     // ),
                     const SizedBox(width: 10),
-                    Text(currency),
+                    Text(
+                      currency,
+                      style: TextStyle(
+                          color: themeProvider.isDarkMode
+                              ? Colors.black
+                              : Colors.blue),
+                    ),
                   ],
                 ),
               );

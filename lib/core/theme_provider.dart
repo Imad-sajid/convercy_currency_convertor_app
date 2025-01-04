@@ -22,4 +22,17 @@ class ThemeProvider with ChangeNotifier {
     await prefs.setBool('isDarkMode', _isDarkMode); // Save _isDarkMode to SharedPreferences
     notifyListeners();
   }
+   bool firstTimeOnboarding = true;
+
+  Future<void> getScreen(context) async {
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    if (sharedPreferences.getBool('firstTimeOnboarding') ?? true) {
+      firstTimeOnboarding = true;
+    } else {
+      firstTimeOnboarding = false;
+    }
+    notifyListeners();
+    // return firstTimeOnboarding;
+    
+  }
 }

@@ -27,7 +27,8 @@ class StandardCurrencyScreen extends StatelessWidget {
 
     // List of screens for navigation
     final List<Widget> screens = [
-      _buildHomeScreen(context, currencyProvider, themeProvider, connectivityProvider),
+      _buildHomeScreen(
+          context, currencyProvider, themeProvider, connectivityProvider),
       const HistoryScreen(),
       const CryptoScreen(),
     ];
@@ -51,8 +52,11 @@ class StandardCurrencyScreen extends StatelessWidget {
                 ? AppColors.backgroundDarkColor
                 : Colors.blue.shade500,
             icons: const [Icons.home, Icons.history, Icons.currency_bitcoin],
-            inactiveColor: themeProvider.isDarkMode ? Colors.white : AppColors.black,
-            activeColor: themeProvider.isDarkMode ? AppColors.primaryColor : AppColors.white,
+            inactiveColor:
+                themeProvider.isDarkMode ? Colors.white : AppColors.black,
+            activeColor: themeProvider.isDarkMode
+                ? AppColors.primaryColor
+                : AppColors.white,
             elevation: 5,
             activeIndex: currencyProvider.currentIndex,
             gapLocation: GapLocation.none,
@@ -98,6 +102,7 @@ class StandardCurrencyScreen extends StatelessWidget {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: Colors.transparent,
             title: Text(
               AppLocalizations.of(context).translate('app_title'),
@@ -127,7 +132,7 @@ class StandardCurrencyScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 16,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -175,7 +180,8 @@ class StandardCurrencyScreen extends StatelessWidget {
                             ),
                           ),
                           IconButton(
-                            icon: const Icon(Icons.swap_vert, size: 24, color: Colors.blue),
+                            icon: const Icon(Icons.compare_arrows_sharp,
+                                size: 24, color: Colors.blue),
                             onPressed: () {
                               currencyProvider.swapCurrencies();
                             },
@@ -198,14 +204,17 @@ class StandardCurrencyScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20.0),
                         child: CurrencyInput(
-                          label: AppLocalizations.of(context).translate('amountLabel'),
+                          label: AppLocalizations.of(context)
+                              .translate('amountLabel'),
                           controller: currencyProvider.amountController,
                           onChanged: (value) {
                             ScaffoldMessenger.of(context).hideCurrentSnackBar();
                             if (value.isEmpty) {
-                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(SnackBar(
                                 content: Text(
-                                  AppLocalizations.of(context).translate('enterValidAmount'),
+                                  AppLocalizations.of(context)
+                                      .translate('enterValidAmount'),
                                 ),
                               ));
                             }
@@ -216,14 +225,17 @@ class StandardCurrencyScreen extends StatelessWidget {
 
                       ElevatedButton(
                         onPressed: () {
-                          if (!connectivityProvider.connectivityResults.contains(ConnectivityResult.none)) {
+                          if (!connectivityProvider.connectivityResults
+                              .contains(ConnectivityResult.none)) {
                             currencyProvider.fetchConversionRate(
                               currencyProvider.fromCurrency.toLowerCase(),
                               currencyProvider.toCurrency.toLowerCase(),
                               true,
                             );
 
-                            Provider.of<SearchHistoryProvider>(context, listen: false).saveSearch(
+                            Provider.of<SearchHistoryProvider>(context,
+                                    listen: false)
+                                .saveSearch(
                               currencyProvider.fromCurrency,
                               currencyProvider.toCurrency,
                               currencyProvider.amountController.text,
@@ -232,7 +244,8 @@ class StandardCurrencyScreen extends StatelessWidget {
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                content: Text(AppLocalizations.of(context).translate('noConnectivityMessage')),
+                                content: Text(AppLocalizations.of(context)
+                                    .translate('noConnectivityMessage')),
                               ),
                             );
                           }
@@ -240,11 +253,15 @@ class StandardCurrencyScreen extends StatelessWidget {
                         style: ButtonStyle(
                           //MAterialstateproperty has been deprecated, use widgetstateproperty
                           backgroundColor: WidgetStateProperty.all(
-                            themeProvider.isDarkMode ? AppColors.black : AppColors.primaryColor,
+                            themeProvider.isDarkMode
+                                ? AppColors.black
+                                : AppColors.primaryColor,
                           ),
-                          foregroundColor: WidgetStateProperty.all(AppColors.white),
+                          foregroundColor:
+                              WidgetStateProperty.all(AppColors.white),
                         ),
-                        child: Text(AppLocalizations.of(context).translate('convert')),
+                        child: Text(
+                            AppLocalizations.of(context).translate('convert')),
                       ),
                     ],
                   ),
@@ -256,13 +273,13 @@ class StandardCurrencyScreen extends StatelessWidget {
                     ? const CircularProgressIndicator()
                     : currencyProvider.conversionRate != 0.0
                         ? ConvertedAmount(
-                            amount: _parseAmount(currencyProvider.amountController.text) * currencyProvider.conversionRate,
+                            amount: _parseAmount(
+                                    currencyProvider.amountController.text) *
+                                currencyProvider.conversionRate,
                             fromCurrency: currencyProvider.fromCurrency,
                             toCurrency: currencyProvider.toCurrency,
                           )
                         : const SizedBox(),
-
-                
               ],
             ),
           ),

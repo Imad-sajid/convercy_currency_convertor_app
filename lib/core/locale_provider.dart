@@ -11,14 +11,22 @@ class LocaleProvider extends ChangeNotifier {
 
   Locale get locale => _locale;
 
-  Future<void> loadLocale() async {
+ Future<void> loadLocale() async {
+  try {
     _prefs = await SharedPreferences.getInstance();
     String? languageCode = _prefs?.getString('locale');
     if (languageCode != null && _localeSupported(Locale(languageCode))) {
       _locale = Locale(languageCode);
+    } else {
+      _locale = const Locale('en');
     }
-    notifyListeners();
+  } catch (e) {
+    print("Error loading locale: $e");
+    _locale = const Locale('en'); // Fallback to default locale
   }
+  notifyListeners();
+}
+
 
   void setLocale(Locale locale) {
     if (!_localeSupported(locale)) return;
